@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd" id="WebApp_ID" version="3.0">
+  <display-name>phgs</display-name>
+  <welcome-file-list>
+    <welcome-file>showIndex.jsp</welcome-file>
+    <welcome-file>index.jsp</welcome-file>
+  </welcome-file-list>
+    <filter>
+        <filter-name>encodeFilter</filter-name>
+        <filter-class>com.phgs.filter.EncodingFilter</filter-class>
+        <init-param>
+            <param-name>encoding</param-name>
+            <param-value>UTF-8</param-value>
+        </init-param>
+    </filter>
+    <filter-mapping>
+        <filter-name>encodeFilter</filter-name>
+        <url-pattern>/*</url-pattern>
+    </filter-mapping>
+  <servlet>
+    <servlet-name>UserServlet</servlet-name>
+    <servlet-class>com.phgs.servlet.UserServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>NewsServlet</servlet-name>
+    <servlet-class>com.phgs.servlet.NewsServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>ProductServlet</servlet-name>
+    <servlet-class>com.phgs.servlet.ProductServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>ManagerLoginServlet</servlet-name>
+    <servlet-class>com.phgs.servlet.ManagerLoginServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>ClientServlet</servlet-name>
+    <servlet-class>com.phgs.servlet.ClientServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>ChatServlet</servlet-name>
+    <servlet-class>com.phgs.servlet.ChatServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>MessageServlet</servlet-name>
+    <servlet-class>com.phgs.servlet.MessageServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>RevertServlet</servlet-name>
+    <servlet-class>com.phgs.servlet.RevertServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>OrderServlet</servlet-name>
+    <servlet-class>com.phgs.servlet.OrderServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>AboutServlet</servlet-name>
+    <servlet-class>com.phgs.servlet.AboutServlet</servlet-class>
+  </servlet>
+
+
+
+
+
+
+
+
+
+
+  <servlet-mapping>
+    <servlet-name>UserServlet</servlet-name>
+    <url-pattern>/admin/UserServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>NewsServlet</servlet-name>
+    <url-pattern>/admin/NewsServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>ProductServlet</servlet-name>
+    <url-pattern>/admin/ProductServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>ManagerLoginServlet</servlet-name>
+    <url-pattern>/ManagerLoginServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>ClientServlet</servlet-name>
+    <url-pattern>/ClientServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>ChatServlet</servlet-name>
+    <url-pattern>/chat/ChatServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>MessageServlet</servlet-name>
+    <url-pattern>/admin/MessageServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>RevertServlet</servlet-name>
+    <url-pattern>/admin/RevertServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>OrderServlet</servlet-name>
+    <url-pattern>/admin/OrderServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>AboutServlet</servlet-name>
+    <url-pattern>/admin/AboutServlet</url-pattern>
+  </servlet-mapping>
+    <filter>
+        <filter-name>loginFilter</filter-name>
+        <filter-class>com.phgs.filter.LoginFiter</filter-class>
+    </filter>
+    <filter-mapping>
+        <filter-name>loginFilter</filter-name>
+        <url-pattern>/admin/*</url-pattern>
+    </filter-mapping>
+</web-app>

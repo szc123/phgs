@@ -1,0 +1,4 @@
+<script type="text/javascript" src="My97Date/WdatePicker.js"></script>
+
+
+ <input type="text" class="Wdate" onclick="WdatePicker({dateFmt:'yyyy:MM:dd HH:mm:ss'})" placeholder="请输入新闻发布时间" />
